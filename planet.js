@@ -1,12 +1,16 @@
 class Planet {
-	constructor(angleToHero, centerX, centerY, radius, rotateAngle, startAngle, endAngle) {
-		this.angleToHero = angleToHero;
+	constructor(name, centerX, centerY, radius, rotateAngle, startAngle, endAngle) {
+		this.name = name;
 		this.centerX = centerX;
 		this.centerY = centerY;
 		this.radius = radius;
 		this.rotateAngle = rotateAngle;
 		this.startAngle = startAngle;
 		this.endAngle = endAngle;
+	}
+
+	var getName = function() {
+		return name;
 	}
 
 	var getAngleToHero = function() {

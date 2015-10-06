@@ -4,7 +4,7 @@ function main(){
 	canvas.width = CANVAS_WIDTH;
 	canvas.height = CANVAS_HEIGHT;
 	document.body.appendChild(canvas);
-	ctx.fillstyle = "black";
+	ctx.fillstyle = "white";
 
 	// Listen for keyboard strokes and mouse clicks
 	var keysDown = {};
