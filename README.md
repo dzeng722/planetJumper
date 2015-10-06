@@ -1,4 +1,4 @@
-# planetJumper
+# Planet Jumper
 
 Tips
 ---
