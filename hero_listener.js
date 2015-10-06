@@ -14,7 +14,7 @@ var hero = {
 	y: 0
 };
 
-// Check for hero to be on which planet
+// Updates hero position and angle
 var refreshHeroVectors = function() { 
 
 	// Updates planet to hero angles
@@ -22,7 +22,7 @@ var refreshHeroVectors = function() {
 		hero_planet_angle[i] = (arctan( (y - planet_array[i].getCenterY()) / (x - planet_array[i].getCenterX() ) ) );
 	};
 
-	// Updates planet !surface to hero distance
+	// Updates surface to hero distances
 	for (var i = hero_planet_dist.length - 1; i >= 0; i--) {
 		hero_planet_dist[i] = sqrt( (x - planet_array[i].getCenterX)^2 + (y - planet_array[i].getCenterY)^2 ) - planet_array[i].getRadius();
 	};
@@ -47,7 +47,7 @@ var findThisPlanet = function(current_planet_id) {
 // Transports hero when jump reaches threshold
 var flyToPlanet = function() {
 
-	this.planet = planet_array[current_planet_id];
+	this_planet = planet_array[current_planet_id];
 	x = this_planet.getRadius() * cos (angle/180);
 	y = this_planet.getRadius() * sin (angle/180);
 	angle = hero_planet_angle[current_planet_id];
