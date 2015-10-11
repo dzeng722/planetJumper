@@ -40,3 +40,4 @@ var Planet = function (planetName, centerX, centerY, radius, rotateAngle, startA
 		return this.getEndAngle;
 	};
 };
+
