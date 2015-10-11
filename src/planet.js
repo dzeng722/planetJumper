@@ -1,43 +1,42 @@
-class Planet {
-	constructor(name, centerX, centerY, radius, rotateAngle, startAngle, endAngle) {
-		this.name = name;
+var Planet = function (planetName, centerX, centerY, radius, rotateAngle, startAngle, endAngle) {
+		
+		this.planetName = planetName;
 		this.centerX = centerX;
 		this.centerY = centerY;
 		this.radius = radius;
 		this.rotateAngle = rotateAngle;
 		this.startAngle = startAngle;
 		this.endAngle = endAngle;
-	}
 
 	var getName = function() {
-		return name;
-	}
+		return this.planetName;
+	};
 
 	var getAngleToHero = function() {
-		return angleToHero;
-	}
+		return this.angleToHero;
+	};
 
 	var getCenterX = function() {
-		return centerX;
-	}
+		return this.centerX;
+	};
 
 	var getCenterY = function() {
-		return centerY;
-	}
+		return this.centerY;
+	};
 
 	var getRadius = function() {
-		return radius;
-	}
+		return this.radius;
+	};
 
 	var getRotateAngle = function() {
-		return rotateAngle;
-	}
+		return this.rotateAngle;
+	};
 
 	var getStartAngle = function() {
-		return startAngle;
-	}
+		return this.startAngle;
+	};
 
 	var getEndAngle = function() {
-		return getEndAngle;
-	}
-}
+		return this.getEndAngle;
+	};
+};
