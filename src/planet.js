@@ -1,12 +1,17 @@
-var Planet = function (planetName, centerX, centerY, radius, rotateAngle, startAngle, endAngle) {
+/***
+*This class defines the characteristics of the planets and contains functions 
+*that help create the planets
+*/
+
+
+var Planet = function (planetName, centerX, centerY, radius, speed, planetColor) {
 		
 		this.planetName = planetName;
 		this.centerX = centerX;
 		this.centerY = centerY;
 		this.radius = radius;
-		this.rotateAngle = rotateAngle;
-		this.startAngle = startAngle;
-		this.endAngle = endAngle;
+		this.speed = speed;
+		this.colour = colour;
 
 	var getName = function() {
 		return this.planetName;
@@ -28,16 +33,44 @@ var Planet = function (planetName, centerX, centerY, radius, rotateAngle, startA
 		return this.radius;
 	};
 
-	var getRotateAngle = function() {
-		return this.rotateAngle;
+	var getSpeed = function() {
+		return this.speed;
 	};
 
-	var getStartAngle = function() {
-		return this.startAngle;
+	var getColor = function () {
+		return planetColor;
 	};
 
-	var getEndAngle = function() {
-		return this.getEndAngle;
+	var makePlanet = function(file) {
+
+		var planet_array = [];
+		planet_array [0] = mars;
+		planet_array [1] = jupiter;
+		planet_array [2] = saturn;
+
+		planet[0] = new Planet (mars, 0, 100, CANVAS.HEIGHT / 2, 25 , 36 / 180 * Math.PI, 0 / 180 * Math.PI , 36 / 180 * Math.PI );
 	};
+
+	var drawPlanet = function(planet) {
+
+		var centerX,centerY,radius;
+
+		this.centerX = planet.getCenterX();
+		this.centerY = planet.getCenterY();
+		this.radius = planet.getRadius();
+
+		var canvas = document.getElementByID("canvas");
+     	var context = canvas.getContext('2d');
+
+     	context.beginPath();
+		context.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
+     	context.fillStyle = this.planetColor;
+     	context.fill();
+     	context.lineWidth = 5;
+      	context.strokeStyle = '#003300';
+     	context.stroke();
+	};
+
+
 };
 

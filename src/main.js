@@ -3,6 +3,7 @@ window.onload = function main(){
 	// Initiates parameters for canvas
 	var CANVAS_WIDTH = 500;
 	var CANVAS_HEIGHT = 300;
+	var SPRITE_HEIGHT = 50;
 
 	// Create canvas
 	var canvas = document.createElement("canvas");
