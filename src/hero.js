@@ -8,7 +8,7 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
   var hero_planet_angle = [planet_array.length-1];
 
   // Updates hero position and angle
-  var refreshHeroVectors = function() {
+  this.refreshHeroVectors = function() {
     // Updates planet to hero angles
     for (var i = hero_planet_angle.length - 1; i >= 0; i--) {
       hero_planet_angle[i] = (arctan( (y - planet_array[i].getCenterY()) / (x - planet_array[i].getCenterX() ) ) );
@@ -21,7 +21,7 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
   };
 
   // proximityListener
-  var listenToDistance = function(current_planet_id) {
+  this.listenToDistance = function(current_planet_id) {
 
     var max_distance = 1000;
     for (var i = hero_planet_dist.length - 1; i >= 0; i--) {
@@ -36,7 +36,7 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
   };
 
   // Transports hero when jump reaches threshold
-  var flyToPlanet = function(){
+  this.flyToPlanet = function(){
     this_planet = planet_array[current_planet_id];
     x = this_planet.getRadius() * cos (angle/180);
     y = this_planet.getRadius() * sin (angle/180);
@@ -44,7 +44,7 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
   };
 
   // Update movements
-  var updatePlayerMovement = function (modifier){
+  this.updatePlayerMovement = function (modifier){
 
     // press left key to rotate counter-clockwise
 
@@ -70,7 +70,7 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
   };
 
   // Reset the player's postion when he or she dies
-  var reset = function (){
+  this.reset = function (){
     this_planet = mars;
     current_planet_id = 0;
     angle = 0;
@@ -85,13 +85,13 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
   this.y = y;
   this.satelliteColor = satelliteColor;
 
-  var updateEnvironmentMovement = function() {
+  this.updateEnvironmentMovement = function() {
     angle -=  this_planet.getSpeed() * time;
     x = x + (this_planet.getRadius()+SPRITE_HEIGHT) * cos(angle);
     y = y + (this_planet.getRadius()+SPRITE_HEIGHT) * sin(angle);
   };
 
-  var drawSatellite = function() {
+  this.drawSatellite = function() {
 
   };
 

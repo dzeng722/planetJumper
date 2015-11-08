@@ -13,35 +13,35 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 	this.speed = speed;
 	this.colour = colour;
 
-	var getName = function() {
+	this.getName = function() {
 		return this.planetName;
 	};
 
-	var getAngleToHero = function() {
+	this.getAngleToHero = function() {
 		return this.angleToHero;
 	};
 
-	var getCenterX = function() {
+	this.getCenterX = function() {
 		return this.centerX;
 	};
 
-	var getCenterY = function() {
+	this.getCenterY = function() {
 		return this.centerY;
 	};
 
-	var getRadius = function() {
+	this.getRadius = function() {
 		return this.radius;
 	};
 
-	var getSpeed = function() {
+	this.getSpeed = function() {
 		return this.speed;
 	};
 
-	var getColor = function () {
+	this.getColor = function () {
 		return planetColor;
 	};
 
-	var drawPlanet = function() {
+	this.drawPlanet = function() {
 
 		var centerX,centerY,radius;
 		this.centerX = this.getCenterX();
