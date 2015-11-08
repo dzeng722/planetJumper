@@ -62,10 +62,9 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 	};
 };
 
-var planet_array  = new Array(3);
-planet_array[0] = new Planet("PLANET_ONE", 150, 150, 30, 0, "green");
-planet_array[1] = new Planet("PLANET_TWO", 300, 100, 50, 0, "blue");
-planet_array[2] = new Planet("PLANET_THREE", 400, 200, 20, 0, "yellow");
-
+var planet_array  = [];
+planet_array.push(new Planet("PLANET_ONE", 150, 150, 30, 0, "green"));
+planet_array.push(new Planet("PLANET_TWO", 300, 100, 50, 0, "blue"));
+planet_array.push(new Planet("PLANET_THREE", 400, 200, 20, 0, "yellow"));
 
 console.log(planet_array[0].getName());
