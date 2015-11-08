@@ -1,4 +1,4 @@
-class Satellite (this_planet, current_planet_id, angle, x, y)
+class Satellite ()
 {
   constructor(this_planet, current_planet_id, angle, x, y)  {
     this.this_planet = this_planet;
