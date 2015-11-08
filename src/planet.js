@@ -41,16 +41,6 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 		return planetColor;
 	};
 
-	var makePlanet = function(file) {
-
-		var planet_array = [];
-		planet_array [0] = mars;
-		planet_array [1] = jupiter;
-		planet_array [2] = saturn;
-
-		planet[0] = new Planet (mars, 0, 100, CANVAS.HEIGHT / 2, 25 , 36 / 180 * Math.PI, 0 / 180 * Math.PI , 36 / 180 * Math.PI );
-	};
-
 	var drawPlanet = function(planet) {
 
 		var centerX,centerY,radius;
@@ -64,16 +54,19 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 
 		context.beginPath();
 		context.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
-		context.fillStyle = this.planetColor;
+		context.fillStyle = this.color;
 		context.fill();
 		context.lineWidth = 5;
 		context.strokeStyle = '#003300';
 		context.stroke();
+
 	};
 };
 
-var planet_array = new Planet(
-	("PLANET_ONE", 150, 150, 30, 0, "green"),
-	("PLANET_TWO", 300, 100, 50, 0, "blue"),
-	("PLANET_THREE", 400, 200, 20, 0, "yellow")
-);
+var planet_array  = new Planet(3);
+planet_array[0] = ("PLANET_ONE", 150, 150, 30, 0, "green");
+planet_array[1] = ("PLANET_TWO", 300, 100, 50, 0, "blue");
+planet_array[2] = ("PLANET_THREE", 400, 200, 20, 0, "yellow");
+
+
+console.log(planet_array[0].getName());

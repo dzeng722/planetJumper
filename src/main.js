@@ -1,4 +1,4 @@
-	// Defines existing planet parameters
+// Defines existing planet parameters
 
 
 
@@ -35,19 +35,11 @@ window.onload = function main(){
 		y -= canvas.offsetTop;
 	}
 
-
 	ctx.fillRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
 	init();
-
 	loop();
 
 	window.requestAnimationFrame(loop,canvas);
-
-	var getPlanetArray = function() {
-		return planet_array;
-
-	};
-
 };
 
 /**
@@ -67,14 +59,15 @@ var init = function() {
 
 };
 
-var draw = function() {
-
-};
-
 var update = function() {
 
 };
 
 var draw = function() {
 
+	for (var j = 0; j < planet_array.length-1; j++) {
+
+		drawPlanet(planet_array[j]);
+
+	}
 };
