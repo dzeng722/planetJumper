@@ -1,3 +1,7 @@
+	// Defines existing planet parameters
+
+
+
 window.onload = function main(){
 
 	// Initiates parameters for canvas
@@ -28,7 +32,7 @@ window.onload = function main(){
 		var x = event.x;
 		var y = event.y;
 		x -= canvas.offsetLeft;
-  		y -= canvas.offsetTop;
+		y -= canvas.offsetTop;
 	}
 
 
@@ -39,6 +43,11 @@ window.onload = function main(){
 
 	window.requestAnimationFrame(loop,canvas);
 
+	var getPlanetArray = function() {
+		return planet_array;
+
+	};
+
 };
 
 /**
@@ -46,30 +55,26 @@ window.onload = function main(){
 *
 */
 
-	var loop = function() {
-		update();
-		draw();
+var loop = function() {
+	update();
+	draw();
 
-		//Loop about 60 fps.
-		window.requestAnimationFrame(loop,canvas);
-	};
+	//Loop about 60 fps.
+	//window.requestAnimationFrame(loop,canvas);
+};
 
-	var init = function() {
+var init = function() {
 
-	};
+};
 
-	var draw = function() {
+var draw = function() {
 
-	};
+};
 
-	var update = function() {
-		var modifier = 10;
-		updateEnvironmentMovement();
-		updatePlayerMovement(modifier);
-	};
+var update = function() {
 
+};
 
-	var draw = function() {
+var draw = function() {
 
-
-	};
+};

@@ -1,17 +1,17 @@
 /***
-*This class defines the characteristics of the planets and contains functions 
+*This class defines the characteristics of the planets and contains functions
 *that help create the planets
 */
 
 
-var Planet = function (planetName, centerX, centerY, radius, speed, planetColor) {
-		
-		this.planetName = planetName;
-		this.centerX = centerX;
-		this.centerY = centerY;
-		this.radius = radius;
-		this.speed = speed;
-		this.colour = colour;
+var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
+
+	this.planetName = planetName;
+	this.centerX = centerX;
+	this.centerY = centerY;
+	this.radius = radius;
+	this.speed = speed;
+	this.colour = colour;
 
 	var getName = function() {
 		return this.planetName;
@@ -60,17 +60,20 @@ var Planet = function (planetName, centerX, centerY, radius, speed, planetColor)
 		this.radius = planet.getRadius();
 
 		var canvas = document.getElementByID("canvas");
-     	var context = canvas.getContext('2d');
+		var context = canvas.getContext('2d');
 
-     	context.beginPath();
+		context.beginPath();
 		context.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
-     	context.fillStyle = this.planetColor;
-     	context.fill();
-     	context.lineWidth = 5;
-      	context.strokeStyle = '#003300';
-     	context.stroke();
+		context.fillStyle = this.planetColor;
+		context.fill();
+		context.lineWidth = 5;
+		context.strokeStyle = '#003300';
+		context.stroke();
 	};
-
-
 };
 
+var planet_array = new Planet(
+	("PLANET_ONE", 150, 150, 30, 0, "green"),
+	("PLANET_TWO", 300, 100, 50, 0, "blue"),
+	("PLANET_THREE", 400, 200, 20, 0, "yellow")
+);
