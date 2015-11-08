@@ -48,17 +48,13 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 		this.centerY = this.getCenterY();
 		this.radius = this.getRadius();
 
-		var canvas = document.getElementByID("canvas");
-		var context = canvas.getContext('2d');
-
-		context.beginPath();
-		context.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
-		context.fillStyle = this.color;
-		context.fill();
-		context.lineWidth = 5;
-		context.strokeStyle = '#003300';
-		context.stroke();
-
+		ctx.beginPath();
+		ctx.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
+		ctx.fillStyle = this.color;
+		ctx.fill();
+		ctx.lineWidth = 5;
+		ctx.strokeStyle = '#003300';
+		ctx.stroke();
 	};
 };
 

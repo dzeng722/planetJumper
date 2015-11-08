@@ -1,21 +1,20 @@
 // Defines existing planet parameters
+// Initiates parameters for canvas
+var CANVAS_WIDTH = 500;
+var CANVAS_HEIGHT = 300;
+var SPRITE_HEIGHT = 50;
 
-
+// Create canvas
+var canvas = document.createElement("canvas");
+var ctx = canvas.getContext("2d");
+canvas.width = CANVAS_WIDTH;
+canvas.height = CANVAS_HEIGHT;
+document.body.appendChild(canvas);
+ctx.fillStyle = "red";
 
 window.onload = function main(){
 
-	// Initiates parameters for canvas
-	var CANVAS_WIDTH = 500;
-	var CANVAS_HEIGHT = 300;
-	var SPRITE_HEIGHT = 50;
 
-	// Create canvas
-	var canvas = document.createElement("canvas");
-	var ctx = canvas.getContext("2d");
-	canvas.width = CANVAS_WIDTH;
-	canvas.height = CANVAS_HEIGHT;
-	document.body.appendChild(canvas);
-	ctx.fillStyle = "red";
 
 	// Listen for key presses and mouse clicks.
 
@@ -64,9 +63,7 @@ var update = function() {
 };
 
 var draw = function() {
-
 	for (var j = 0; j < planet_array.length-1; j++) {
-
 		planet_array[j].drawPlanet();
 	}
 };
