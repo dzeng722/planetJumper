@@ -1,6 +1,6 @@
 
 class Hero extends Satellite {
-  constructor(tryhis_planet, current_planet_id, angle, x, y){
+  constructor(this_planet, current_planet_id, angle, x, y){
     super(this_planet, current_planet_id, angle, x, y);
     this.speed = 10;
     this.hero_planet_dist = [planet_array.length-1];
