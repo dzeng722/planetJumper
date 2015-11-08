@@ -1,5 +1,5 @@
 
-class Hero = extends Satellite {
+class Hero extends Satellite {
   constructor(tryhis_planet, current_planet_id, angle, x, y){
     super(this_planet, current_planet_id, angle, x, y);
     this.speed = 10;
