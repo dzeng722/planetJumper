@@ -67,7 +67,7 @@ var draw = function() {
 
 	for (var j = 0; j < planet_array.length-1; j++) {
 
-		drawPlanet(planet_array[j]);
+		planet_array([j]).drawPlanet();
 
 	}
 };

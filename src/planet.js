@@ -41,13 +41,12 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 		return planetColor;
 	};
 
-	var drawPlanet = function(planet) {
+	var drawPlanet = function() {
 
 		var centerX,centerY,radius;
-
-		this.centerX = planet.getCenterX();
-		this.centerY = planet.getCenterY();
-		this.radius = planet.getRadius();
+		this.centerX = this.getCenterX();
+		this.centerY = this.getCenterY();
+		this.radius = this.getRadius();
 
 		var canvas = document.getElementByID("canvas");
 		var context = canvas.getContext('2d');
@@ -63,10 +62,10 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 	};
 };
 
-var planet_array  = new Planet(3);
-planet_array[0] = ("PLANET_ONE", 150, 150, 30, 0, "green");
-planet_array[1] = ("PLANET_TWO", 300, 100, 50, 0, "blue");
-planet_array[2] = ("PLANET_THREE", 400, 200, 20, 0, "yellow");
+var planet_array  = new Array(3);
+planet_array[0] = new Planet("PLANET_ONE", 150, 150, 30, 0, "green");
+planet_array[1] = new Planet("PLANET_TWO", 300, 100, 50, 0, "blue");
+planet_array[2] = new Planet("PLANET_THREE", 400, 200, 20, 0, "yellow");
 
 
 console.log(planet_array[0].getName());
