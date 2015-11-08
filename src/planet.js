@@ -67,4 +67,4 @@ planet_array.push(new Planet("PLANET_ONE", 150, 150, 30, 0, "green"));
 planet_array.push(new Planet("PLANET_TWO", 300, 100, 50, 0, "blue"));
 planet_array.push(new Planet("PLANET_THREE", 400, 200, 20, 0, "yellow"));
 
-console.log(planet_array[0].getName());
+console.log(planet_array[1].getName());
