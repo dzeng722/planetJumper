@@ -1,3 +1,4 @@
+"use strict";
 
 class Hero extends Satellite {
   constructor(this_planet, current_planet_id, angle, x, y){
@@ -11,7 +12,7 @@ class Hero extends Satellite {
   */
 
   // Updates hero position and angle
-  this.refreshHeroVectors = function() {
+  refreshHeroVectors() {
     // Updates planet to hero angles
     for (var i = hero_planet_angle.length - 1; i >= 0; i--) {
       hero_planet_angle[i] = (arctan( (y - planet_array[i].getCenterY()) / (x - planet_array[i].getCenterX() ) ) );
@@ -21,10 +22,10 @@ class Hero extends Satellite {
     for (var k = hero_planet_dist.length - 1; k >= 0; k--) {
       hero_planet_dist[k] = sqrt( (x - planet_array[k].getCenterX)^2 + (y - planet_array[k].getCenterY)^2 ) - planet_array[k].getRadius();
     }
-  };
+  }
 
   // proximityListener
-  this.listenToDistance = function(current_planet_id) {
+  listenToDistance() {
 
     var max_distance = 1000;
     for (var i = hero_planet_dist.length - 1; i >= 0; i--) {
@@ -36,18 +37,18 @@ class Hero extends Satellite {
     }
 
     return current_planet_id;
-  };
+  }
 
   // Transports hero when jump reaches threshold
-  this.flyToPlanet = function(){
+  flyToPlanet() {
     this_planet = planet_array[current_planet_id];
     x = this_planet.getRadius() * cos (angle/180);
     y = this_planet.getRadius() * sin (angle/180);
     angle = hero_planet_angle[current_planet_id];
-  };
+  }
 
   // Update movements
-  this.updatePlayerMovement = function (modifier){
+  updatePlayerMovement() {
 
     // press left key to rotate counter-clockwise
 
@@ -70,20 +71,20 @@ class Hero extends Satellite {
     }
 
 
-  };
+  }
 
   // Reset the player's postion when he or she dies
-  this.reset = function (){
+  reset() {
     this_planet = mars;
     current_planet_id = 0;
     angle = 0;
     x = 0;
     y = 0;
-  };
+  }
 
-  this.drawHero = function() {
+  drawHero() {
 
-  };
+  }
 
 
 };
