@@ -50,7 +50,7 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 
 		ctx.beginPath();
 		ctx.arc(this.centerX, this.centerY, this.radius, 0, 2 * Math.PI, false);
-		ctx.fillStyle = this.color;
+		ctx.fillStyle = this.colour;
 		ctx.fill();
 		ctx.lineWidth = 5;
 		ctx.strokeStyle = '#003300';
@@ -59,8 +59,8 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 };
 
 var planet_array  = [];
-planet_array.push(new Planet("PLANET_ONE", 150, 150, 30, 0, "green"));
-planet_array.push(new Planet("PLANET_TWO", 300, 100, 50, 0, "blue"));
-planet_array.push(new Planet("PLANET_THREE", 400, 200, 20, 0, "yellow"));
+planet_array.push(new Planet("PLANET_ONE", 100, 150, 30, 0, "green"));
+planet_array.push(new Planet("PLANET_TWO", 250, 100, 50, 0, "blue"));
+planet_array.push(new Planet("PLANET_THREE", 400, 150, 20, 0, "yellow"));
 
 console.log(planet_array[1].getName());

@@ -1,11 +1,14 @@
 
-var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor) {
+class Hero = extends Satellite {
+  constructor(tryhis_planet, current_planet_id, angle, x, y){
+    super(this_planet, current_planet_id, angle, x, y);
+    this.speed = 10;
+    this.hero_planet_dist = [planet_array.length-1];
+    this.hero_planet_angle = [planet_array.length-1];
+  }
   /**
   * Contains parameters that define hero's current location
   */
-  var speed = 10;
-  var hero_planet_dist = [planet_array.length-1];
-  var hero_planet_angle = [planet_array.length-1];
 
   // Updates hero position and angle
   this.refreshHeroVectors = function() {
@@ -78,20 +81,7 @@ var Hero = function (this_planet, current_planet_id, angle, x, y, satelliteColor
     y = 0;
   };
 
-  this.this_planet = this_planet;
-  this.current_planet_id = current_planet_id;
-  this.angle = angle;
-  this.x = x;
-  this.y = y;
-  this.satelliteColor = satelliteColor;
-
-  this.updateEnvironmentMovement = function() {
-    angle -=  this_planet.getSpeed() * time;
-    x = x + (this_planet.getRadius()+SPRITE_HEIGHT) * cos(angle);
-    y = y + (this_planet.getRadius()+SPRITE_HEIGHT) * sin(angle);
-  };
-
-  this.drawSatellite = function() {
+  this.drawHero = function() {
 
   };
 
