@@ -9,9 +9,18 @@ class Satellite {
     this.y = y;
   }
 
+  getX(){
+    return this.x;
+  }
+
+  getY(){
+    return this.y;
+  }
+
+
   updateEnvironmentMovement() {
     angle -=  this_planet.getSpeed() * time;
     x = x + (this_planet.getRadius()+SPRITE_HEIGHT) * cos(angle);
     y = y + (this_planet.getRadius()+SPRITE_HEIGHT) * sin(angle);
-  };
+  }
 }

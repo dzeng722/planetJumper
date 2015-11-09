@@ -42,8 +42,6 @@ var Planet = function (planetName, centerX, centerY, radius, speed, colour) {
 	};
 
 	this.drawPlanet = function() {
-
-		var centerX,centerY,radius;
 		this.centerX = this.getCenterX();
 		this.centerY = this.getCenterY();
 		this.radius = this.getRadius();

@@ -3,10 +3,12 @@
 class Hero extends Satellite {
   constructor(this_planet, current_planet_id, angle, x, y){
     super(this_planet, current_planet_id, angle, x, y);
+
     this.speed = 10;
     this.hero_planet_dist = [planet_array.length-1];
     this.hero_planet_angle = [planet_array.length-1];
   }
+
   /**
   * Contains parameters that define hero's current location
   */
@@ -83,12 +85,16 @@ class Hero extends Satellite {
   }
 
   drawHero() {
+    this.x = this.getX();
+    this.y = this.getY();
     var img = new Image();
     img.onload = function () {
-      ctx.drawImage (img, 0, 0);
+      ctx.drawImage (img, guy.getX(), guy.getY());
     };
+    console.log(this.getX());
     img.src="resources/guy.png";
   }
+
 };
 
-var guy = new Hero (planet_array[0], 0, 0, 130, 150 );
+var guy = new Hero (planet_array[0], 0, 0, 100, 150);
