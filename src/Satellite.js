@@ -7,7 +7,6 @@ class Satellite {
     this.angle = angle;
     this.x = x;
     this.y = y;
-    this.satelliteColor = satelliteColor;
   }
 
   updateEnvironmentMovement() {
@@ -15,7 +14,4 @@ class Satellite {
     x = x + (this_planet.getRadius()+SPRITE_HEIGHT) * cos(angle);
     y = y + (this_planet.getRadius()+SPRITE_HEIGHT) * sin(angle);
   };
-
-
-
 }

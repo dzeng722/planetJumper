@@ -66,4 +66,5 @@ var draw = function() {
 	for (var j = 0; j < planet_array.length; j++) {
 		planet_array[j].drawPlanet();
 	}
+	guy.drawHero();
 };

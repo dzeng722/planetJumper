@@ -83,8 +83,12 @@ class Hero extends Satellite {
   }
 
   drawHero() {
-
+    var img = new Image();
+    img.onload = function () {
+      ctx.drawImage (img, 0, 0);
+    };
+    img.src="resources/guy.png";
   }
-
-
 };
+
+var guy = new Hero (planet_array[0], 0, 0, 130, 150 );
